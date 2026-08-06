@@ -5,15 +5,6 @@ We present OpenS2S, a fully open-source, transparent and end-to-end large speech
 
 <a href='https://huggingface.co/CASIA-LM/OpenS2S'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> <a href='https://huggingface.co/datasets/CASIA-LM/OpenS2S_Datasets'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a> <a href='https://arxiv.org/pdf/2507.05177'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://casia-lm.github.io/OpenS2S'><img src='https://img.shields.io/badge/Project-Page-Green'></a> 
 
-
-# DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects
-
-We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S and designed for low-resource Chinese dialects that supports Mandarin, English, Sichuanese, Cantonese, and the Tianjin dialect through a scalable dialect speech dialogue synthesis pipeline and two-stage post-training with self-aligned speech supervision.
-
-
-<img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/Demo-Coming%20Soon-lightgrey'>
-
-
 ## Model Architecture
 
 ![architecture](figures/Architecture.png)
@@ -26,6 +17,27 @@ As shown in the figure, OpenS2S consists of the following main components:
 
 * Streaming Speech Decoder: The speech response is first converted into discrete tokens
 using a supervised semantic speech tokenizer. Then, an autoregressive text-to-speech language model is used to generate speech tokens conditioned on the hidden states of the LLM, enabling real-time generation.
+
+# DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects
+
+We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S for low-resource Chinese dialects. Existing speech dialogue models are largely optimized for mainstream languages, while scarce dialect data and semantic mismatch during dialect adaptation make speech generation unstable. DialectS2S addresses these challenges with a scalable dialect speech dialogue synthesis pipeline and a two-stage post-training strategy with self-aligned speech supervision.
+
+DialectS2S supports multilingual spoken interaction across Mandarin, English, Sichuanese, Cantonese, and the Tianjin dialect. It rewrites existing dialogues into dialectal expressions, synthesizes and filters dialect speech, and aligns speech supervision with the model's evolving semantic representations to improve dialect consistency, response quality, and speech intelligibility.
+
+
+<img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/Demo-Coming%20Soon-lightgrey'>
+
+## Model Architecture
+
+![DialectS2S architecture](figures/DialectS2S_Method.png)
+
+As shown in the figure, DialectS2S adopts a unified Thinker-Talker architecture and introduces self-aligned speech supervision to reduce the semantic mismatch between the model's hidden representations and its speech targets:
+
+* Dialect Speech Dialogue Synthesis: Existing Mandarin dialogues are rewritten into dialectal expressions, converted into dialect speech, and filtered for naturalness to construct scalable training data.
+
+* Mixed-Data Supervised Fine-Tuning: Dialect, Mandarin, and English speech dialogues are jointly used to learn dialect-aware representations while preserving the model's original multilingual capabilities.
+
+* Self-Aligned Speech Supervision: The fine-tuned Thinker first predicts response text, from which a dialect TTS model synthesizes aligned speech targets. This allows the Talker to focus on pronunciation and prosody rather than correcting semantic inconsistencies.
 
 ## Example
 
