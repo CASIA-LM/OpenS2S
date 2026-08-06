@@ -20,10 +20,7 @@ using a supervised semantic speech tokenizer. Then, an autoregressive text-to-sp
 
 # DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects
 
-We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S for low-resource Chinese dialects. Existing speech dialogue models are largely optimized for mainstream languages, while scarce dialect data and semantic mismatch during dialect adaptation make speech generation unstable. DialectS2S addresses these challenges with a scalable dialect speech dialogue synthesis pipeline and a two-stage post-training strategy with self-aligned speech supervision.
-
-DialectS2S supports multilingual spoken interaction across Mandarin, English, Sichuanese, Cantonese, and the Tianjin dialect. It rewrites existing dialogues into dialectal expressions, synthesizes and filters dialect speech, and aligns speech supervision with the model's evolving semantic representations to improve dialect consistency, response quality, and speech intelligibility.
-
+We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S for low-resource Chinese dialects.
 
 <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/Demo-Coming%20Soon-lightgrey'>
 
