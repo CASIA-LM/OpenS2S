@@ -6,6 +6,14 @@ We present OpenS2S, a fully open-source, transparent and end-to-end large speech
 <a href='https://huggingface.co/CASIA-LM/OpenS2S'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> <a href='https://huggingface.co/datasets/CASIA-LM/OpenS2S_Datasets'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a> <a href='https://arxiv.org/pdf/2507.05177'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a> <a href='https://casia-lm.github.io/OpenS2S'><img src='https://img.shields.io/badge/Project-Page-Green'></a> 
 
 
+# DialectS2S: End-to-End Speech Dialogue Modeling for Low-Resource Chinese Dialects
+
+We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S and designed for low-resource Chinese dialects that supports Mandarin, English, Sichuanese, Cantonese, and the Tianjin dialect through a scalable dialect speech dialogue synthesis pipeline and two-stage post-training with self-aligned speech supervision.
+
+
+<img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/Demo-Coming%20Soon-lightgrey'>
+
+
 ## Model Architecture
 
 ![architecture](figures/Architecture.png)
@@ -21,7 +29,24 @@ using a supervised semantic speech tokenizer. Then, an autoregressive text-to-sp
 
 ## Example
 
+### OpenS2S
+
 More examples can be found in the [project page](https://casia-lm.github.io/OpenS2S).
+
+### DialectS2S
+
+<!-- TODO: Replace this placeholder with the DialectS2S interactive demo. -->
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="720" height="240">
+        <strong>DialectS2S Demo</strong><br><br>
+        🚧 Interactive demo interface coming soon.<br><br>
+        Mandarin · English · Sichuanese · Cantonese · Tianjin Dialect
+      </td>
+    </tr>
+  </table>
+</div>
 
 
 ## Usage
