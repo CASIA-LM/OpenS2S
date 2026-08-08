@@ -30,8 +30,6 @@ We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S fo
 
 As shown in the figure, DialectS2S adopts a unified Thinker-Talker architecture and introduces self-aligned speech supervision to reduce the semantic mismatch between the model's hidden representations and its speech targets:
 
-* Dialect Speech Dialogue Synthesis: Existing Mandarin dialogues are rewritten into dialectal expressions, converted into dialect speech, and filtered for naturalness to construct scalable training data.
-
 * Mixed-Data Supervised Fine-Tuning: Dialect, Mandarin, and English speech dialogues are jointly used to learn dialect-aware representations while preserving the model's original multilingual capabilities.
 
 * Self-Aligned Speech Supervision: The fine-tuned Thinker first predicts response text, from which a dialect TTS model synthesizes aligned speech targets. This allows the Talker to focus on pronunciation and prosody rather than correcting semantic inconsistencies.
@@ -44,19 +42,7 @@ More examples can be found in the [project page](https://casia-lm.github.io/Open
 
 ### DialectS2S
 
-<!-- TODO: Replace this placeholder with the DialectS2S interactive demo. -->
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="720" height="240">
-        <strong>DialectS2S Demo</strong><br><br>
-        🚧 Interactive demo interface coming soon.<br><br>
-        Mandarin · English · Sichuanese · Cantonese · Tianjin Dialect
-      </td>
-    </tr>
-  </table>
-</div>
-
+More examples can be found in the [project page](https://casia-lm.github.io/DialectS2S).
 
 ## Usage
 
