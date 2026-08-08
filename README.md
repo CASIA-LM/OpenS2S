@@ -22,7 +22,7 @@ using a supervised semantic speech tokenizer. Then, an autoregressive text-to-sp
 
 We present DialectS2S, an end-to-end speech dialogue model built upon OpenS2S for low-resource Chinese dialects.
 
-<img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset%20Coming%20Soon-lightgrey'> <img src='https://img.shields.io/badge/Demo-Coming%20Soon-lightgrey'>
+<a href='https://huggingface.co/CASIA-LM/DialectS2S'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> <a href='https://huggingface.co/datasets/CASIA-LM/DialectS2S_Datasets'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a> <a href='https://casia-lm.github.io/OpenS2S'><img src='https://img.shields.io/badge/Project-Page-Green'></a> 
 
 ## Model Architecture
 
